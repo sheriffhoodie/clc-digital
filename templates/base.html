@@ -5,9 +5,35 @@
     <meta charset="utf-8">
     <title>WeGrow</title>
     <link rel="icon" type="image/png" href="{% static 'thefavicon.ico' %}"/>
+    <link rel="stylesheet" href="{% static 'master.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   </head>
   <body>
+    <nav class='navbar navbar-expand mynav' role='navigation' id='navbar'>
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">WeGrow</a>
+        <ul class='nav mr-auto'>
+          {% if user.is_authenticated %}
+            <li class='nav-item'>
+              <a class="nav-link" href="#">Browse</a>
+            </li>
+            <li class='nav-item'>
+              <a class="nav-link" href="#">Your Profile</a>
+            </li>
+            <li class='nav-item'>
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+          {% else %}
+            <li class='nav-item'>
+              <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
+            </li>
+            <li class='nav-item'>
+              <a class="nav-link" href="{% url 'accounts:signup' %}">Sign Up</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
     <div class="container mycontent">
     {% block content %}
 
