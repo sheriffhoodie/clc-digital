@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>WeGrow</title>
+    <title>CLC</title>
     <link rel="icon" type="image/png" href="{% static 'thefavicon.ico' %}"/>
     <link rel="stylesheet" href="{% static 'master.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -11,7 +11,7 @@
   <body>
     <nav class='navbar navbar-expand mynav' role='navigation' id='navbar'>
       <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}">WeGrow</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Currier Lawn Care</a>
         <ul class='nav mr-auto'>
           {% if user.is_authenticated %}
             <li class='nav-item'>
@@ -21,7 +21,7 @@
               <a class="nav-link" href="#">Your Profile</a>
             </li>
             <li class='nav-item'>
-              <a class="nav-link" href="#">Logout</a>
+              <a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a>
             </li>
           {% else %}
             <li class='nav-item'>
