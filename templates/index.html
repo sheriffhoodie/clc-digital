@@ -3,17 +3,17 @@
 {% block content %}
 <div class="background-div">
   {% if user.is_authenticated %}
-    <div class="card" style="width: 300px;">
-      <div class="card-body">
+    <div class="card intro-card-div">
+      <div class="card-body intro-card-body">
         <h3 class="card-title">Welcome, {{user.username}}</h3>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text card-center">How can we help you today?</p>
       </div>
     </div>
   {% else %}
-    <div class="card" style="width: 300px;">
-      <div class="card-body">
-        <h3 class="card-title">Welcome to Currier Lawn Care</h3>
-        <p class="card-text">Please login to schedule service and see customer reviews.</p>
+    <div class="card intro-card-div2">
+      <div class="card-body intro-card-body">
+        <h3 class="card-title card-center">Welcome to <br>Currier Lawn Care</h3>
+        <p class="card-text card-center">Please login or sign up for a free account to schedule service and see customer reviews.</p>
       </div>
     </div>
   {% endif %}
