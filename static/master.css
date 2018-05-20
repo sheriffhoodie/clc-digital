@@ -18,6 +18,10 @@
   color: #28a745;
 }
 
+.content {
+  padding-top: 30px;
+}
+
 .background-div {
   background-image: url(images/index-bg.jpg);
   min-height: 1000px;
