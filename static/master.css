@@ -3,12 +3,24 @@
 }
 
 .nav-item .nav-link {
-  color: green;
-  font-size: 1.1em;
+  color: #28a745;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.nav-item .nav-link:hover {
+  color: #0056b3;
 }
 
 .navbar-brand {
-  font-size: 2.4em!important; 
+  font-size: 2.4em!important;
   font-weight: 900;
-  color: green;
+  color: #28a745;
+}
+
+.background-div {
+  background-image: url(images/index-bg.jpg);
+  min-height: 1000px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

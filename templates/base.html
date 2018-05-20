@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>CLC</title>
-    <link rel="icon" type="image/png" href="{% static 'thefavicon.ico' %}"/>
+    <link rel="icon" type="image/png" href="{% static 'clcicon.png' %}"/>
     <link rel="stylesheet" href="{% static 'master.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   </head>
@@ -15,7 +15,13 @@
         <ul class='nav mr-auto'>
           {% if user.is_authenticated %}
             <li class='nav-item'>
-              <a class="nav-link" href="#">Browse</a>
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class='nav-item'>
+              <a class="nav-link" href="#">Schedule Service</a>
+            </li>
+            <li class='nav-item'>
+              <a class="nav-link" href="#">Reviews</a>
             </li>
             <li class='nav-item'>
               <a class="nav-link" href="#">Your Profile</a>
@@ -34,7 +40,7 @@
         </ul>
       </div>
     </nav>
-    <div class="container mycontent">
+    <div class="">
     {% block content %}
 
     {% endblock %}
