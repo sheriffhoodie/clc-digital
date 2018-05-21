@@ -1,3 +1,10 @@
+html {
+  background: url(images/index-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
 #navbar {
   background: lightgrey;
 }
@@ -20,20 +27,22 @@
 
 .content {
   padding-top: 30px;
+  background-color: transparent;
 }
 
-.background-div {
+/* .background-div {
   background-image: url(images/index-bg.jpg);
-  min-height: 1000px;
-  background-size: contain;
+  height: auto 100%;
+  background-position: left top;
+  background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 
 .intro-card-div {
   width: 300px;
-  position: absolute;
-  top: 40px;
-  left: 40px;
+  position: absolute !important;
+  top: 120px;
+  left: 70px;
 }
 
 .card-center {
@@ -44,10 +53,15 @@
   width: 400px;
   top: 200px;
   left: 35%;
+  position: absolute !important;
 }
 
 .intro-card-body {
   width: 100%;
   border: 5px solid #28a745;
   border-radius: 3%;
+}
+
+.card-title {
+  text-align: center;
 }
