@@ -7,6 +7,12 @@ class Review(models.Model):
     user = models.ForeignKey(User, related_name='reviews', on_delete='CASCADE')
     created_at = models.DateTimeField(auto_now=True)
     body = models.TextField()
+    title = models.CharField(max_length=200, unique=False)
+    rating = models.IntegerField()
 
     def __str__(self):
-        return self.body
+        return self.title
+
+    class Meta:
+        ordering = ['-created_at']
+        unique_together = ['user', 'title']
