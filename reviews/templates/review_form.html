@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h4>Write a New Review</h4>
+  <form id="reviewForm" action="{% url 'reviews:create' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary btn-large" value="POST">
+  </form>
+</div>
+{% endblock %}

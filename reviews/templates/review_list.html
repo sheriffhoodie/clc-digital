@@ -1,9 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="card intro-card-div2">
-    <div class="card-body intro-card-body">
+  <div class="card">
+    <div class="card-body review-card-body">
       <h1 class="card-title reviews-title">Reviews</h1>
     </div>
   </div>
+  <a class="btn btn-success" href="{% url 'reviews:create' %}">Write a Review</a>
+  <div class="reviews-list">
+    {% if review_list %}
+      {% for review in review_list %}
+        {% include "_review.html" %}
+      {% endfor %}
+    {% else %}
+      <h2>No reviews to show.</h2>
+    {% endif %}
+  </div>
+
 {% endblock content %}

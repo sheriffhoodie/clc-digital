@@ -1,3 +1,15 @@
 .reviews-title {
   text-align: center;
 }
+
+.reviews-list {
+  display: flex !important;
+  flex-direction: column;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.review-card {
+  max-width: 400px !important;
+  margin: 30px;
+}

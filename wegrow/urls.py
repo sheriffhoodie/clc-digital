@@ -24,4 +24,5 @@ urlpatterns = [
     path('reviews/', include('reviews.urls', namespace='reviews')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('about/', views.AboutPage.as_view(), name='about'),
+    path('profile/', views.ProfilePage.as_view(), name='profile')
 ]
